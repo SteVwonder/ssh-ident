@@ -546,7 +546,7 @@ def FindKeys(identity, config):
   """
   directories = [os.path.join(config.Get("DIR_IDENTITIES"), identity)]
   if identity == getpass.getuser():
-    directories.append(os.path.expanduser("~/.ssh"))
+    directories.append(os.path.expanduser("~/.ssh/keys"))
 
   pattern = re.compile(config.Get("PATTERN_KEYS"))
   found = collections.defaultdict(dict)
